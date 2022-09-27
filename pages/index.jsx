@@ -14,9 +14,9 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-20 justify-center sm:gap-0 sm:mx-12 flex sm:items-center font-mono">
+      <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-28 justify-center sm:gap-0 sm:mx-12 flex sm:items-center font-mono">
         <div className="flex flex-col sm:items-start items-center">
-          <p className="text-blue-400 font-semibold text-5xl sm:text-7xl lg:text-8xl -mt-16">
+          <p className="text-blue-400 font-semibold text-[3.5rem] leading-none sm:text-7xl lg:text-8xl -mt-16">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] flex">
               JUNIOR
             </span>
