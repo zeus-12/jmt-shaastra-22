@@ -6,7 +6,6 @@ import Testimonial from "../components/Testimonial";
 import TimelineComponent from "../components/TimelineComponent";
 
 export default function Home() {
-  const active = 1;
   return (
     <div className="sm:px-12 px-5">
       <Head>
@@ -15,9 +14,9 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <div className="min-h-[92vh] justify-between mx-12 flex items-center">
-        <div>
-          <p className="text-blue-400 font-semibold text-7xl">
+      <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-20 justify-center sm:gap-0 sm:mx-12 flex sm:items-center font-mono">
+        <div className="flex flex-col sm:items-start items-center">
+          <p className="text-blue-400 font-semibold text-6xl sm:text-7xl lg:text-8xl -mt-16">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] flex">
               JUNIOR
             </span>
@@ -25,28 +24,25 @@ export default function Home() {
               MAKE-A-THON
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] flex">
-              SHAASTRA 2023
+              SHAASTRA'23
             </span>
-
-            {/* <span className="flex">JUNIOR</span> */}
-            {/* <span className="flex"></span>
-            <span className="flex"></span> */}
           </p>
           <Button
             variant="outline"
             color="orange"
-            size="md"
-            className="w-48 hover:bg-orange-600 hover:text-white inline px-2 py-1 rounded-md text-xl mt-4"
+            // size="md"
+            className="sm:w-48 w-[75vw] hover:bg-orange-600 hover:text-white inline px-2 py-1 rounded-md text-xl mt-4"
             onClick={() => Router.push("/register")}
           >
             Register
           </Button>
         </div>
-        <div className="">
-          <img src="/drone-2.gif" alt="drone illustration" />
+        <div className="sm:absolute bottom-0 sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
+          {/* <img src="/drone-2.gif" alt="drone illustration" /> */}
+          <img src="/robot.png" alt="drone illustration" />
         </div>
       </div>
-      <div className="flex flex-col gap-12">
+      <div className="flex mt-14 flex-col gap-12">
         {/* About Section */}
         <div
           className="flex-col gap-6 sm:flex-row flex justify-evenly items-center"
@@ -102,7 +98,7 @@ export default function Home() {
         </div>
       </div>
       {/* Timeline */}
-      <TimelineComponent active={active} />
+      <TimelineComponent />
       <Testimonial />
 
       <div id="testimonials"></div>
