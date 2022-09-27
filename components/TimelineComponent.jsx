@@ -27,7 +27,7 @@ const TimelineComponent = () => {
   return (
     <div ref={refContainer} className="mt-16 xl:ml-14">
       <p className="text-5xl sm:ml-14 font-semibold mb-8">Timeline</p>
-      <div className="sm:ml-14">
+      <div className="sm:ml-6 md:ml-14">
         <Timeline
           className="text-xl sm:text-2xl"
           active={active}

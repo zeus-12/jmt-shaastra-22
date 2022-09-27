@@ -13,7 +13,7 @@ export default function Navbar() {
         <Logo setOpened={setOpened} />
         <div className="sm:hidden">
           <Burger
-            color="#60a5fa"
+            color="#e9672f"
             opened={opened}
             onClick={() => setOpened((o) => !o)}
             title={title}
@@ -25,7 +25,7 @@ export default function Navbar() {
         {opened && (
           <div className="hidden sm:flex">
             <Burger
-              color="#26c6da"
+              color="#e9672f"
               opened={opened}
               onClick={() => setOpened((o) => !o)}
               title={title}

@@ -74,7 +74,7 @@ export default function NotFoundImage() {
             variant="outline"
             size="md"
             mt="xl"
-            className={classes.control}
+            className={`hover:bg-blue-400 ${classes.control}`}
             onClick={() => Router.push("/")}
           >
             Get back to home page

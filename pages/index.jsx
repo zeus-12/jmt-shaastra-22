@@ -10,13 +10,13 @@ export default function Home() {
     <div className="sm:px-12 px-5">
       <Head>
         <title>JMT</title>
-        <meta name="description" content="JMT Website" />
+        <meta name="description" content="JMT 2023" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-20 justify-center sm:gap-0 sm:mx-12 flex sm:items-center font-mono">
         <div className="flex flex-col sm:items-start items-center">
-          <p className="text-blue-400 font-semibold text-6xl sm:text-7xl lg:text-8xl -mt-16">
+          <p className="text-blue-400 font-semibold text-5xl sm:text-7xl lg:text-8xl -mt-16">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] flex">
               JUNIOR
             </span>
@@ -31,7 +31,7 @@ export default function Home() {
             variant="outline"
             color="orange"
             // size="md"
-            className="sm:w-48 w-[75vw] hover:bg-orange-600 hover:text-white inline px-2 py-1 rounded-md text-xl mt-4"
+            className="sm:w-48 w-full hover:bg-orange-600 hover:text-white inline px-2 py-1 rounded-md text-xl mt-4"
             onClick={() => Router.push("/register")}
           >
             Register
@@ -42,14 +42,14 @@ export default function Home() {
           <img src="/robot.png" alt="drone illustration" />
         </div>
       </div>
-      <div className="flex mt-14 flex-col gap-12">
+      <div className="flex flex-col gap-12">
         {/* About Section */}
         <div
           className="flex-col gap-6 sm:flex-row flex justify-evenly items-center"
           id="about"
         >
           <div className="w-full sm:w-3/4 md:w-1/2">
-            <p className="text-5xl font-semibold">About</p>
+            <p className="sm:text-5xl text-3xl font-semibold">About</p>
             <p className="text-gray-400 mt-2 text-xl">
               Junior Make-a-Thon (JMT) is a one-of-a-kind event launched under
               Tech and Innovation Fair that promotes maker spirit among school
@@ -84,7 +84,7 @@ export default function Home() {
             <img src="/why-us.png" alt="why-us" />
           </div>
           <div className="w-full sm:w-3/4 md:w-1/2">
-            <p className="text-5xl font-semibold">Why?</p>
+            <p className="sm:text-5xl text-3xl font-semibold">Why?</p>
             <p className="text-gray-400 mt-2 text-xl">
               The purpose of JMT is to introduce maker culture to school
               students and encourage them to come up with innovative solutions
