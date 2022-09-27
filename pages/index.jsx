@@ -24,7 +24,7 @@ export default function Home() {
               MAKE-A-THON
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] flex">
-              SHAASTRA'23
+              SHAASTRA&apos;23
             </span>
           </p>
           <Button
