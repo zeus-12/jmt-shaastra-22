@@ -37,9 +37,16 @@ export default function Home() {
             Register
           </Button>
         </div>
-        <div className="sm:absolute bottom-0 sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
+        <div className="sm:absolute bottom-0 h-auto sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
           {/* <img src="/drone-2.gif" alt="drone illustration" /> */}
-          <img src="/robot.png" alt="drone illustration" />
+          <Image
+            width="100%"
+            height="100%"
+            layout="responsive"
+            objectFit="contain"
+            src="/robot.png"
+            alt="robot illustration"
+          />
         </div>
       </div>
       <div className="flex flex-col gap-12">
