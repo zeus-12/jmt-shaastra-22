@@ -30,26 +30,21 @@ const TimelineComponent = () => {
         Timeline
       </p>
       <div className="sm:ml-6 md:ml-14">
-        <Timeline
-          className="text-xl sm:text-2xl"
-          active={active}
-          lineWidth={3}
-          bulletSize={12}
-        >
+        <Timeline className="" active={active} lineWidth={3} bulletSize={16}>
           <Timeline.Item
-            className="sm:max-w-[60vw] md:max-w-[80vw]"
+            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
             title="Registration"
           >
-            <p className="text-gray-400">
+            <p className="text-lg sm:text-xl text-gray-400">
               Registrations starts on October 2nd. Students can register for
               free, individually or in groups of maximum 4 members.
             </p>
           </Timeline.Item>
           <Timeline.Item
-            className="sm:max-w-[60vw] md:max-w-[80vw]"
+            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
             title="Round 1"
           >
-            <p className="text-gray-400">
+            <p className="text-lg sm:text-xl text-gray-400">
               The team will submit an abstract of their product ideas, as well
               as a scientific proposal based on the selected theme. The projects
               will be submitted online through the portal. All participants who
@@ -57,10 +52,10 @@ const TimelineComponent = () => {
             </p>
           </Timeline.Item>
           <Timeline.Item
-            className="md:max-w-[60vw] sm:max-w-[80vw]"
+            className="text-2xl sm:text-3xl md:max-w-[60vw] sm:max-w-[80vw]"
             title="Round 2"
           >
-            <p className="text-gray-400">
+            <p className="text-lg sm:text-xl text-gray-400">
               Top teams will be given mentorship sessions to help them finish
               their prototype. They will be invited to exhibit and demonstrate
               their models or prototypes at the Indian Institute Of Technology,
@@ -68,11 +63,11 @@ const TimelineComponent = () => {
             </p>
           </Timeline.Item>
           <Timeline.Item
-            className="sm:max-w-[60vw] md:max-w-[80vw]"
+            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
             align="left"
             title="Finals"
           >
-            <p className="text-gray-400">
+            <p className="text-lg sm:text-xl text-gray-400">
               3 day event at IIT Madras, along with several workshops. A lot of
               rewards are waiting for the winners and the other finalists.
             </p>

@@ -11,8 +11,6 @@ import Router from "next/router";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    // paddingTop: 80,
-    // paddingBottom: 80,
     minHeight: "92vh",
     display: "flex",
     alignItems: "center",
@@ -72,9 +70,10 @@ export default function NotFoundImage() {
           </Text>
           <Button
             variant="outline"
+            color="orange"
             size="md"
             mt="xl"
-            className={`hover:bg-blue-400 hover:text-white ${classes.control}`}
+            className={` hover:bg-orange-600 hover:text-white ${classes.control}`}
             onClick={() => Router.push("/")}
           >
             Get back to home page
