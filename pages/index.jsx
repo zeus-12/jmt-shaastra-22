@@ -49,7 +49,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-6">
         {/* About Section */}
         <div
           className="flex-col gap-6 sm:flex-row flex justify-evenly items-center"
@@ -80,15 +80,30 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="">
-            <img src="/about-us.png" alt="about-us" />
+          <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
+            <Image
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+              src="/about-us.png"
+              alt="about-us"
+            />
           </div>
         </div>
 
         {/* "Why JMT?" Section */}
         <div className="flex-col-reverse gap-6 sm:flex-row flex justify-evenly items-center">
-          <div className="">
-            <img src="/why-us.png" alt="why-us" />
+          {/* fix this */}
+          <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
+            <Image
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+              src="/why-us.png"
+              alt="why-us"
+            />
           </div>
           <div className="w-full sm:w-3/4 md:w-1/2">
             <p className="sm:text-5xl text-3xl font-semibold">Why?</p>

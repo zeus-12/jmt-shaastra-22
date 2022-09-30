@@ -1,3 +1,4 @@
 - compress images, use nextimage for all
 - fix image loading for 404 page
 - add card-like-bg for home-page items
+- blockquqote color?
