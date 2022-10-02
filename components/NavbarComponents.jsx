@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const navbarElements = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/#about" },
   { name: "Gallery", href: "/gallery" },
   { name: "Register", href: "/register" },
   { name: "Partners", href: "/partners" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/contact" },
 ];
 

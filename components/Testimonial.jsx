@@ -10,7 +10,7 @@ const Testimonial = () => {
           // autoplay=""
           controls="controls"
         >
-          <source src="/testimonial-vid.mp4" type="video/mp4" />
+          <source src="/testimonial-1.mp4" type="video/mp4" />
         </video>
 
         <Blockquote className="text-base sm:text-lg" cite="– N.S Vigash">
@@ -18,11 +18,18 @@ const Testimonial = () => {
           a great event. Throughout the event, we were provided constant
           support, constant clearing of doubts, mentorship & webinars by the
           team which helped us a lot. We are glad to be a part of this event.
-          Thank you.
         </Blockquote>
       </div>
 
-      <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw]">
+      <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw] flex flex-col sm:flex-row-reverse justify-center items-center">
+        <video
+          className="sm:w-[40vw]  rounded-md h-auto max-h-[60vh]"
+          // autoplay=""
+          controls="controls"
+        >
+          <source src="/testimonial-2.mp4" type="video/mp4" />
+        </video>
+
         <Blockquote className="text-base sm:text-lg" cite="– Vaishali Rambabu">
           It was a very memorable experience for me. I had fun researching and
           exploring the topic that I chose. My mentor was very helpful and the
@@ -34,7 +41,7 @@ const Testimonial = () => {
           organising such a great event. Throughout the event, we were provided
           constant support, constant clearing of doubts, mentorship & webinars
           by the team which helped us a lot. We are glad to be a part of this
-          event. Thank you.
+          event.
         </Blockquote>
       </div>
     </div>
