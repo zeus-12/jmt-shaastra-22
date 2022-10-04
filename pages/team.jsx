@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Contact = () => {
+const Team = () => {
   const cores = [
     {
       name: "Saubhan",
@@ -73,11 +73,7 @@ const Contact = () => {
             <p className="sm:text-4xl text-gray-300 text-2xl text-center font-semibold my-2 sm:my-4">
               {key}
             </p>
-            <div
-              className={`grid px-auto ${
-                members.length > 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
-              }  justify-items-center grid-cols-2`}
-            >
+            <div className="flex flex-wrap justify-around items-center">
               {members.map((member) => (
                 <div className="mb-4" key={member.phoneno}>
                   <div className="hover:scale-105 transition transform duration-150 ease-out w-[45vw] lg:w-[25vw] mb-2">
@@ -105,4 +101,4 @@ const Contact = () => {
     </div>
   );
 };
-export default Contact;
+export default Team;

@@ -8,7 +8,7 @@ const navbarElements = [
   { name: "Register", href: "/register" },
   { name: "Partners", href: "/partners" },
   // { name: "Testimonials", href: "/#testimonials" },
-  { name: "Contact", href: "/contact" },
+  { name: "Team", href: "/team" },
 ];
 
 export const LinkComponent = ({ link, name }) => (
