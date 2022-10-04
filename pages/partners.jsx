@@ -9,7 +9,7 @@ const Partners = () => {
 
   return (
     <>
-      <p className="text-7xl text-orange-400 font-bold text-center py-2">
+      <p className="text-5xl md:text-7xl text-orange-400 font-bold text-center py-2">
         Partners
       </p>
       <div className="space-y-6">
