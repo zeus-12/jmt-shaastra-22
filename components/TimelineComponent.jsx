@@ -2,13 +2,19 @@ import { Timeline } from "@mantine/core";
 import { ScrollContext } from "../utils/ScrollObserver";
 import { useContext, useEffect, useRef } from "react";
 
+const opacityForBlock = (sectionProgress, blockNo) => {
+  const progress = sectionProgress - blockNo;
+  if (progress >= 0 && progress < 1) return 1;
+  return 0.35;
+};
+
 const TimelineComponent = () => {
   let active;
   const { scrollY } = useContext(ScrollContext);
 
   const refContainer = useRef(null);
-  const numOfPages = 4;
-  let progress = 0;
+  const numOfPages = 5;
+  let progress = 1;
 
   const { current: elContainer } = refContainer;
   if (elContainer) {
@@ -25,51 +31,59 @@ const TimelineComponent = () => {
   }
 
   return (
-    <div ref={refContainer} className="mt-16 xl:ml-14">
-      <p className="sm:text-5xl text-3xl sm:ml-14 font-semibold mb-8">
-        Timeline
-      </p>
-      <div className="sm:ml-6 md:ml-14">
-        <Timeline className="" active={active} lineWidth={3} bulletSize={16}>
-          <Timeline.Item
-            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
-            title="Registration"
-          >
-            <p className="text-lg sm:text-xl text-gray-400">
+    <div ref={refContainer} className="mt-16 ">
+      <div className="">
+        <Timeline
+          className="flex flex-col items-center"
+          active={active + 1}
+          lineWidth={3}
+          bulletSize={16}
+        >
+          <p className="sm:text-5xl text-4xl  sm:ml-14 font-semibold mb-8">
+            Timeline
+          </p>
+          <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw] ">
+            <p
+              style={{ opacity: opacityForBlock(progress, 0) }}
+              className="text-2xl sm:text-4xl font-semibold "
+            >
+              <p className="text-orange-400">Registration: </p>
               Registrations starts on October 2nd. Students can register for
               free, individually or in groups of maximum 4 members.
             </p>
           </Timeline.Item>
-          <Timeline.Item
-            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
-            title="Round 1"
-          >
-            <p className="text-lg sm:text-xl text-gray-400">
+          <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
+            <p
+              style={{ opacity: opacityForBlock(progress, 1) }}
+              className="text-2xl sm:text-4xl font-semibold "
+            >
+              <p className="text-orange-400">Round 1: </p>
               The team will submit an abstract of their product ideas, as well
               as a scientific proposal based on the selected theme. The projects
               will be submitted online through the portal. All participants who
               advance to the next round will be notified via email.
             </p>
           </Timeline.Item>
-          <Timeline.Item
-            className="text-2xl sm:text-3xl md:max-w-[60vw] sm:max-w-[80vw]"
-            title="Round 2"
-          >
-            <p className="text-lg sm:text-xl text-gray-400">
+          <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
+            <p
+              style={{ opacity: opacityForBlock(progress, 2) }}
+              className="text-2xl sm:text-4xl font-semibold "
+            >
+              <p className="text-orange-400">Round 2: </p>
               Top teams will be given mentorship sessions to help them finish
               their prototype. They will be invited to exhibit and demonstrate
               their models or prototypes at the Indian Institute Of Technology,
               Madras.
             </p>
           </Timeline.Item>
-          <Timeline.Item
-            className="text-2xl sm:text-3xl sm:max-w-[60vw] md:max-w-[80vw]"
-            align="left"
-            title="Finals"
-          >
-            <p className="text-lg sm:text-xl text-gray-400">
-              3 day event at IIT Madras, along with several workshops. A lot of
-              rewards are waiting for the winners and the other finalists.
+          <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
+            <p
+              style={{ opacity: opacityForBlock(progress, 3) }}
+              className="text-2xl sm:text-4xl font-semibold "
+            >
+              <p className="text-orange-400">Finals: </p>3 day event at IIT
+              Madras, along with several workshops. A lot of rewards are waiting
+              for the winners and the other finalists.
             </p>
           </Timeline.Item>
         </Timeline>

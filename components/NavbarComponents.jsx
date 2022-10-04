@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const navbarElements = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
+  // { name: "About", href: "/#about" },
   { name: "Gallery", href: "/gallery" },
   { name: "Register", href: "/register" },
   { name: "Partners", href: "/partners" },
-  { name: "Testimonials", href: "/#testimonials" },
+  // { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/contact" },
 ];
 
 export const LinkComponent = ({ link, name }) => (
   <Link href={link} passHref>
-    <p className="text-semibold lg:px-1 xl:px-2 py-1 text-gray-300 rounded-md hover:text-white cursor-pointer text-center hover:bg-gray-900">
+    <p className="text-semibold lg:px-1 xl:px-4 py-2 text-gray-300 rounded-md hover:text-white cursor-pointer text-center hover:bg-gray-900">
       {name}
     </p>
   </Link>

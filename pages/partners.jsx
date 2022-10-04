@@ -8,8 +8,10 @@ const Partners = () => {
   };
 
   return (
-    <div>
-      <p className="text-5xl font-bold text-center my-2">Partners</p>
+    <>
+      <p className="text-7xl text-orange-400 font-bold text-center py-2">
+        Partners
+      </p>
       <div className="space-y-6">
         {/* {Object.keys(partnerDetails).map((year) => { */}
         {[2023, "2022 & 2021", 2020].map((year) => {
@@ -20,7 +22,7 @@ const Partners = () => {
               <div className="flex gap-4 justify-center">
                 {partners.map((partner) => (
                   <div
-                    className="w-40 h-40 hover:scale-105 transition transform duration-150 ease-out"
+                    className="w-60 h-60 hover:scale-105 transition transform duration-150 ease-out"
                     key={partner}
                   >
                     <Image
@@ -38,7 +40,7 @@ const Partners = () => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 export default Partners;

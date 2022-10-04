@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Contact = () => {
   const cores = [
     {
@@ -42,7 +44,7 @@ const Contact = () => {
     },
     {
       name: "Shreya",
-      phoneno: 9966029565,
+      phoneno: 7358517337,
       email: "",
     },
     {
@@ -52,39 +54,54 @@ const Contact = () => {
     },
   ];
 
+  const team = {
+    Cores: cores,
+    Heads: heads,
+    Coordinators: coordinators,
+  };
+
   return (
     <div className="sm:mx-8 mx-2 ">
-      <p className="text-4xl text-center font-bold">Our Team</p>
+      <p className="sm:text-5xl text-orange-400 text-3xl text-center font-bold">
+        Our Team
+      </p>
 
-      <p className="text-3xl font-semibold">Cores</p>
-      <div className="flex justify-evenly">
-        {cores.map((core) => (
-          <div key={core.phoneno}>
-            <p>{core.name}</p>
-            <p>{core.phoneno}</p>
+      {Object.keys(team).map((key) => {
+        let members = team[key];
+        return (
+          <div key={key}>
+            <p className="sm:text-4xl text-gray-300 text-2xl text-center font-semibold my-2 sm:my-4">
+              {key}
+            </p>
+            <div
+              className={`grid px-auto ${
+                members.length > 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
+              }  justify-items-center grid-cols-2`}
+            >
+              {members.map((member) => (
+                <div className="mb-4" key={member.phoneno}>
+                  <div className="hover:scale-105 transition transform duration-150 ease-out w-[45vw] lg:w-[25vw] mb-2">
+                    <Image
+                      width="100%"
+                      height="100%"
+                      layout="responsive"
+                      objectFit="contain"
+                      src={`/team/${key}/${member.name}.jpg`}
+                      alt={member.name}
+                    />
+                  </div>
+                  <p className="text-lg lg:text-xl font-semibold text-center">
+                    {member.name}
+                  </p>
+                  <p className="text-lg lg:text-xl text-gray-400 text-center">
+                    {member.phoneno}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-
-      <p className="text-3xl font-semibold">Heads</p>
-      <div className="flex justify-evenly">
-        {heads.map((head) => (
-          <div key={head.phoneno}>
-            <p>{head.name}</p>
-            <p>{head.phoneno}</p>
-          </div>
-        ))}
-      </div>
-
-      <p className="text-3xl font-semibold">Coordinators</p>
-      <div className="grid grid-cols-3">
-        {coordinators.map((coordinator) => (
-          <div key={coordinator.phoneno}>
-            <p>{coordinator.name}</p>
-            <p>{coordinator.phoneno}</p>
-          </div>
-        ))}
-      </div>
+        );
+      })}
     </div>
   );
 };

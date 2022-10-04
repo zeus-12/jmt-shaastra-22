@@ -2,8 +2,10 @@ import { Blockquote } from "@mantine/core";
 
 const Testimonial = () => {
   return (
-    <div className="min-h-screen mt-16 xl:ml-14">
-      <p className="sm:text-5xl text-3xl font-semibold mb-6">Testimonials</p>
+    <div className="min-h-screen mt-16">
+      <p className="sm:text-5xl text-3xl font-semibold text-center mb-6">
+        Testimonials
+      </p>
       <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw] flex flex-col sm:flex-row justify-center items-center">
         <video
           className="sm:w-[40vw]  rounded-md h-auto max-h-[60vh]"
