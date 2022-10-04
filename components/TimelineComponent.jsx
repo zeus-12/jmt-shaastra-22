@@ -35,7 +35,7 @@ const TimelineComponent = () => {
       <div className="">
         <Timeline
           className="flex flex-col items-center"
-          active={active + 1}
+          active={active}
           lineWidth={3}
           bulletSize={16}
         >
@@ -44,20 +44,20 @@ const TimelineComponent = () => {
           </p>
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw] ">
             <p
-              style={{ opacity: opacityForBlock(progress, 0) }}
+              style={{ opacity: opacityForBlock(progress, 1) }}
               className="text-2xl sm:text-4xl font-semibold "
             >
-              <p className="text-orange-400">Registration: </p>
+              <span className="block text-orange-400">Registration: </span>
               Registrations starts on October 2nd. Students can register for
               free, individually or in groups of maximum 4 members.
             </p>
           </Timeline.Item>
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
-              style={{ opacity: opacityForBlock(progress, 1) }}
+              style={{ opacity: opacityForBlock(progress, 2) }}
               className="text-2xl sm:text-4xl font-semibold "
             >
-              <p className="text-orange-400">Round 1: </p>
+              <span className="block text-orange-400">Round 1: </span>
               The team will submit an abstract of their product ideas, as well
               as a scientific proposal based on the selected theme. The projects
               will be submitted online through the portal. All participants who
@@ -66,10 +66,10 @@ const TimelineComponent = () => {
           </Timeline.Item>
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
-              style={{ opacity: opacityForBlock(progress, 2) }}
+              style={{ opacity: opacityForBlock(progress, 3) }}
               className="text-2xl sm:text-4xl font-semibold "
             >
-              <p className="text-orange-400">Round 2: </p>
+              <span className="block text-orange-400">Round 2: </span>
               Top teams will be given mentorship sessions to help them finish
               their prototype. They will be invited to exhibit and demonstrate
               their models or prototypes at the Indian Institute Of Technology,
@@ -78,12 +78,12 @@ const TimelineComponent = () => {
           </Timeline.Item>
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
-              style={{ opacity: opacityForBlock(progress, 3) }}
+              style={{ opacity: opacityForBlock(progress, 4) }}
               className="text-2xl sm:text-4xl font-semibold "
             >
-              <p className="text-orange-400">Finals: </p>3 day event at IIT
-              Madras, along with several workshops. A lot of rewards are waiting
-              for the winners and the other finalists.
+              <span className="block text-orange-400">Finals: </span>3 day event
+              at IIT Madras, along with several workshops. A lot of rewards are
+              waiting for the winners and the other finalists.
             </p>
           </Timeline.Item>
         </Timeline>
