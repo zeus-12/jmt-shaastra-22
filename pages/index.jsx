@@ -58,12 +58,13 @@ export default function Home() {
           <div className="w-full sm:w-3/4 md:w-1/2">
             <p className="sm:text-5xl text-3xl font-semibold">About</p>
             <p className="font-medium text-gray-400 mt-2 text-xl">
-              Junior Make-a-Thon (JMT) is a one-of-a-kind event launched under
-              Tech and Innovation Fair that promotes maker spirit among school
-              students by encouraging them to build unique and innovative
-              solutions for existing problems. Students undergo dedicated
-              mentorship sessions and workshops which helps them to convert
-              their idea into a working prototype/model.
+              <span className="text-orange-400">Junior Make-a-Thon</span>
+              (JMT) is a one-of-a-kind event launched under Tech and Innovation
+              Fair that promotes maker spirit among school students by
+              encouraging them to build unique and innovative solutions for
+              existing problems. Students undergo dedicated mentorship sessions
+              and workshops which helps them to convert their idea into a
+              working prototype/model.
               <span className="flex">
                 The competition will be categorized into two:
               </span>
@@ -108,7 +109,8 @@ export default function Home() {
           <div className="w-full sm:w-3/4 md:w-1/2">
             <p className="sm:text-5xl text-3xl font-semibold">Why?</p>
             <p className="font-medium text-gray-400 mt-2 text-xl">
-              The purpose of JMT is to introduce maker culture to school
+              The purpose of JMT is to introduce{" "}
+              <span className="text-orange-400">maker culture</span> to school
               students and encourage them to come up with innovative solutions
               to various problems. JMT motivates students to combine their
               practical thinking skills with theoretical knowledge they gain

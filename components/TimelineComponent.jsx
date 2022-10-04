@@ -48,7 +48,8 @@ const TimelineComponent = () => {
               className="text-2xl sm:text-4xl font-semibold "
             >
               <span className="block text-orange-400">Registration: </span>
-              Registrations starts on October 2nd. Students can register for
+              Registrations starts on October{" "}
+              <span className="ordinal">2nd</span>. Students can register for
               free, individually or in groups of maximum 4 members.
             </p>
           </Timeline.Item>
