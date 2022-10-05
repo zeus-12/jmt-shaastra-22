@@ -40,6 +40,7 @@ export default function Home() {
         <div className="sm:absolute bottom-0 h-auto sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
           {/* <img src="/drone-2.gif" alt="drone illustration" /> */}
           <Image
+            priority={true}
             width="100%"
             height="100%"
             layout="responsive"
@@ -83,6 +84,7 @@ export default function Home() {
           </div>
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
+              priority={true}
               width="100%"
               height="100%"
               layout="responsive"
@@ -98,6 +100,7 @@ export default function Home() {
           {/* fix this */}
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
+              priority={true}
               width="100%"
               height="100%"
               layout="responsive"
