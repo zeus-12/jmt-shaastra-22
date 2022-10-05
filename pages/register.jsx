@@ -21,11 +21,16 @@ const Register = () => {
     },
   });
 
-  const registerHandler = () => {};
-  const copyLeadersData = (index) => {
+  const registerHandler = async () => {
+    await fetch("http://localhost:3000/api/register", {
+      method: "POST",
+      body: JSON.stringify(form.values),
+    });
+  };
+  const copyLeadersData = (index, property) => {
     form.setFieldValue(
-      `studentDetails.${index}.school`,
-      form.getInputProps("studentDetails.0.school").value
+      `studentDetails.${index}.${property}`,
+      form.getInputProps(`studentDetails.0.${property}`).value
     );
   };
 
@@ -119,7 +124,7 @@ const Register = () => {
             />
             <Button
               className={index == 0 ? "hidden" : ""}
-              onClick={() => copyLeadersData(index)}
+              onClick={() => copyLeadersData(index, "school")}
               variant="outline"
               compact
             >
@@ -132,12 +137,22 @@ const Register = () => {
             withAsterisk
             {...form.getInputProps(`studentDetails.${index}.email`)}
           />
-          <TextInput
-            className="w-[90vw] max-w-[30rem]"
-            placeholder="City"
-            withAsterisk
-            {...form.getInputProps(`studentDetails.${index}.city`)}
-          />
+          <div className="flex justify-between items-center gap-2 w-[90vw] max-w-[30rem]">
+            <TextInput
+              className="w-[90vw] max-w-[30rem]"
+              placeholder="City"
+              withAsterisk
+              {...form.getInputProps(`studentDetails.${index}.city`)}
+            />
+            <Button
+              className={index == 0 ? "hidden" : ""}
+              onClick={() => copyLeadersData(index, "city")}
+              variant="outline"
+              compact
+            >
+              Same as Leader
+            </Button>
+          </div>
         </div>
       ))}
 
