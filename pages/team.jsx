@@ -75,7 +75,7 @@ const Team = () => {
             </p>
             <div className="flex flex-wrap justify-center items-center">
               {members.map((member) => (
-                <div className="mb-4" key={member.phoneno}>
+                <div className="mb-4" key={member.name}>
                   <div className="hover:scale-105 transition transform duration-150 ease-out w-[45vw] lg:w-[25vw] mb-2">
                     <Image
                       width="100%"
