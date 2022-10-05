@@ -42,8 +42,8 @@ const Register = () => {
         ]}
         {...form.getInputProps("category")}
       />
-      <div className="flex items-center justify-between max-w-[25rem] w-screen">
-        <p className="text-2xl mt-2 -mb-2">Team Members</p>
+      <div className="flex mt-2 -mb-2 items-center justify-between max-w-[25rem] w-screen">
+        <p className="text-2xl">Team Members</p>
         <Button
           className={
             form.values.studentDetails.length > 3
@@ -90,14 +90,16 @@ const Register = () => {
             withAsterisk
             {...form.getInputProps(`studentDetails.${index}.phoneNo`)}
           />
-          <div className="flex justify-between items-center w-[90vw] max-w-[30rem]">
+          <div className="flex justify-between items-center gap-2 w-[90vw] max-w-[30rem]">
             <TextInput
               className="flex-1"
               placeholder="School"
               withAsterisk
               {...form.getInputProps(`studentDetails.${index}.school`)}
             />
-            <Button>Same as Leader</Button>
+            <Button variant="outline" compact>
+              Same as Leader
+            </Button>
           </div>
           <TextInput
             className="w-[90vw] max-w-[30rem]"

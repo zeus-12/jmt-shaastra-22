@@ -3,6 +3,10 @@
 - add card-like-bg for home-page items
 - blockquqote color?
 - set slideSize to 100 in small screens
+- for next images:
+  placeholder="blur"
+  blurDataURL={data:image/...}
+
 - include webm or .ogg for firefox and opera (video tag)
   <code>
 

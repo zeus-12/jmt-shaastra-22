@@ -73,7 +73,7 @@ const Team = () => {
             <p className="sm:text-4xl text-gray-300 text-2xl text-center font-semibold my-2 sm:my-4">
               {key}
             </p>
-            <div className="flex flex-wrap justify-around items-center">
+            <div className="flex flex-wrap justify-center items-center">
               {members.map((member) => (
                 <div className="mb-4" key={member.phoneno}>
                   <div className="hover:scale-105 transition transform duration-150 ease-out w-[45vw] lg:w-[25vw] mb-2">
