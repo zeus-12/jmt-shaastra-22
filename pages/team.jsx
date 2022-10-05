@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Team = () => {
   const cores = [
+    { name: "Mrinalini" },
     {
       name: "Saubhan",
     },
-    { name: "Mrinalini" },
   ];
 
   const heads = [
