@@ -5,6 +5,7 @@ import {
   Button,
   Code,
   Select,
+  Radio,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { IconTrash } from "@tabler/icons";
@@ -40,7 +41,18 @@ const Register = () => {
         {...form.getInputProps("teamName")}
       />
 
-      <Select
+      <div className=" w-[90vw] max-w-[30rem]">
+        <Radio.Group
+          label="Category"
+          withAsterisk
+          {...form.getInputProps("category")}
+        >
+          <Radio value="junior" label="Junior" />
+          <Radio value="senior" label="Senior" />
+        </Radio.Group>
+      </div>
+
+      {/* <Select
         label="Category"
         className=" w-[90vw] max-w-[30rem]"
         placeholder="Category"
@@ -49,7 +61,7 @@ const Register = () => {
           { value: "Senior", label: "Senior" },
         ]}
         {...form.getInputProps("category")}
-      />
+      /> */}
       <div className="flex mt-2 -mb-2 items-center justify-between max-w-[25rem] w-screen">
         <p className="text-2xl">Team Members</p>
         <Button
@@ -94,7 +106,7 @@ const Register = () => {
           />
           <TextInput
             className="w-[90vw] max-w-[30rem]"
-            placeholder="Phone Number (w. WhatsApp)"
+            placeholder="Phone Number (with WhatsApp)"
             withAsterisk
             {...form.getInputProps(`studentDetails.${index}.phoneNo`)}
           />
