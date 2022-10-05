@@ -62,8 +62,8 @@ const Team = () => {
 
   return (
     <div className="sm:mx-8 mx-2 ">
-      <p className="sm:text-5xl text-orange-400 text-3xl text-center font-bold">
-        Our Team
+      <p className="text-5xl font-bold text-center pt-4 pb-0">
+        Our <span className="text-orange-400">Team</span>
       </p>
 
       {Object.keys(team).map((key) => {

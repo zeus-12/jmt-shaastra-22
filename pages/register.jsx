@@ -21,10 +21,18 @@ const Register = () => {
   });
 
   const registerHandler = () => {};
-  // const fields = ;
+  const copyLeadersData = (index) => {
+    form.setFieldValue(
+      `studentDetails.${index}.school`,
+      form.getInputProps("studentDetails.0.school").value
+    );
+  };
 
   return (
     <div className="flex flex-col mx-2 sm:mx-4 items-center">
+      <p className="text-5xl text-orange-400 font-bold text-center pt-4 pb-0">
+        Register
+      </p>
       <TextInput
         className="w-[90vw] max-w-[30rem]"
         label="Team Name"
@@ -97,7 +105,12 @@ const Register = () => {
               withAsterisk
               {...form.getInputProps(`studentDetails.${index}.school`)}
             />
-            <Button variant="outline" compact>
+            <Button
+              className={index == 0 ? "hidden" : ""}
+              onClick={() => copyLeadersData(index)}
+              variant="outline"
+              compact
+            >
               Same as Leader
             </Button>
           </div>

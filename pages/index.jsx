@@ -38,7 +38,6 @@ export default function Home() {
           </Button>
         </div>
         <div className="sm:absolute bottom-0 h-auto sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
-          {/* <img src="/drone-2.gif" alt="drone illustration" /> */}
           <Image
             priority={true}
             width="100%"
@@ -84,7 +83,6 @@ export default function Home() {
           </div>
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
-              priority={true}
               width="100%"
               height="100%"
               layout="responsive"
@@ -97,10 +95,8 @@ export default function Home() {
 
         {/* "Why JMT?" Section */}
         <div className="flex-col-reverse gap-6 sm:flex-row flex justify-evenly items-center">
-          {/* fix this */}
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
-              priority={true}
               width="100%"
               height="100%"
               layout="responsive"
@@ -124,7 +120,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Timeline */}
       <TimelineComponent />
       <Testimonial />
 
