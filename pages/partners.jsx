@@ -13,7 +13,7 @@ const Partners = () => {
         Partners
       </p>
 
-      <div className="space-y-6">
+      <div className="">
         {/* {Object.keys(partnerDetails).map((year) => { */}
         {[2023, "2022 & 2021", 2020].map((year) => {
           let partners = partnerDetails[year];
@@ -23,7 +23,7 @@ const Partners = () => {
               <div className="flex md:gap-4 justify-center">
                 {partners.map((partner) => (
                   <div
-                    className="w-60 h-60 hover:scale-105 transition transform duration-150 ease-out"
+                    className="sm:w-48 sm:h-48 h-32 w-32 hover:scale-105 transition transform duration-150 ease-out"
                     key={partner}
                   >
                     <Image

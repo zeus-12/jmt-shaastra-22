@@ -1,7 +1,5 @@
 const Airtable = require("airtable");
 export default function handler(req, res) {
-  console.log(req.body);
-
   const data = JSON.parse(req.body);
 
   Airtable.configure({
@@ -11,7 +9,15 @@ export default function handler(req, res) {
   var base = Airtable.base(process.env.AIRTABLE_BASE_ID);
 
   const { teamName, category, studentDetails } = data;
-  console.log(teamName, category, studentDetails);
+  if (
+    !teamName ||
+    !category ||
+    studentDetails.length < 1 ||
+    studentDetails.length > 4
+  ) {
+    res.status(400).json({ error: "Invalid data" });
+  }
+
   let fields = {
     teamName,
     category,
@@ -33,6 +39,9 @@ export default function handler(req, res) {
     function (err, records) {
       if (err) {
         console.error(err);
+        res
+          .status(500)
+          .json({ error: "Some error occured, please try again later!" });
         return;
       }
       records.forEach(function (record) {
@@ -41,5 +50,5 @@ export default function handler(req, res) {
     }
   );
 
-  res.status(200).json({ message: "success" });
+  res.status(200).json({ success: "success" });
 }
