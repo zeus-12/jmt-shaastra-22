@@ -18,6 +18,19 @@ export default function handler(req, res) {
     res.status(400).json({ error: "Invalid data" });
   }
 
+  studentDetails.forEach((student) => {
+    if (
+      !student.name ||
+      !student.email ||
+      !student.phoneNo ||
+      !student.city ||
+      !student.school
+    ) {
+      res.status(400).json({ error: "Invalid data" });
+      return;
+    }
+  });
+
   let fields = {
     teamName,
     category,

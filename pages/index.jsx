@@ -61,10 +61,13 @@ export default function Home() {
               <span className="text-orange-400">Junior Make-a-Thon</span>
               (JMT) is a one-of-a-kind event launched under Tech and Innovation
               Fair that promotes maker spirit among school students by
-              encouraging them to build unique and innovative solutions for
-              existing problems. Students undergo dedicated mentorship sessions
-              and workshops which helps them to convert their idea into a
-              working prototype/model.
+              encouraging them to{" "}
+              <span className="text-orange-400">
+                build unique and innovative solutions
+              </span>{" "}
+              for existing problems. Students undergo dedicated mentorship
+              sessions and workshops which helps them to convert their idea into
+              a working prototype/model.
               <span className="flex">
                 The competition will be categorized into two:
               </span>
@@ -114,8 +117,9 @@ export default function Home() {
               to various problems. JMT motivates students to combine their
               practical thinking skills with theoretical knowledge they gain
               from school to solve real life problems. It also introduces
-              enterpreneurship to these students thus creating the future
-              enterpreneurs of the country.
+              enterpreneurship to these students thus creating the{" "}
+              <span className="text-orange-400">future enterpreneurs</span> of
+              the country.
             </p>
           </div>
         </div>

@@ -67,9 +67,6 @@ const Register = () => {
       city: "",
     });
   };
-  // useEffect(() => {
-  //   form.validate;
-  // }, [form.values]);
 
   const [loading, setLoading] = useState(false);
   const [opened, setOpened] = useState(false);
@@ -79,6 +76,12 @@ const Register = () => {
     <div className="flex flex-col mx-2 sm:mx-4 items-center">
       <p className="text-5xl text-orange-400 font-bold text-center pt-4 pb-0">
         Register
+      </p>
+      <p className="text-gray-400 my-2 text-center">
+        Already registered? Download your problem statement{" "}
+        <a className="text-cyan-400" href="">
+          here
+        </a>
       </p>
       <TextInput
         required={true}
@@ -194,12 +197,7 @@ const Register = () => {
       >
         Register
       </Button>
-      <p className="mt-32 text-center">
-        Already registered? Download your problem statement{" "}
-        <a className="text-cyan-400" href="">
-          here
-        </a>
-      </p>
+
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
