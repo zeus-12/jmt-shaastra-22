@@ -29,9 +29,9 @@ const Register = () => {
   });
 
   const registerHandler = async () => {
-    form.validate();
+    const validationResult = form.validate();
 
-    if (Object.keys(form.errors).length > 0) {
+    if (Object.keys(validationResult.errors).length > 0) {
       return;
     }
     setLoading(true);
@@ -152,7 +152,7 @@ const Register = () => {
               {...form.getInputProps(`studentDetails.${index}.school`)}
             />
             <Button
-              className={index == 0 ? "hidden" : ""}
+              className={index === 0 ? "hidden" : ""}
               onClick={() => copyLeadersData(index, "school")}
               variant="outline"
               compact
@@ -194,7 +194,7 @@ const Register = () => {
       >
         Register
       </Button>
-      <p className="mt-32">
+      <p className="mt-32 text-center">
         Already registered? Download your problem statement{" "}
         <a className="text-cyan-400" href="">
           here
@@ -207,7 +207,7 @@ const Register = () => {
         centered={true}
         classNames={{
           title: `text-3xl font-semibold ${
-            title === Error ? "text-orange-400" : "text-red-500"
+            title === "Error" ? "text-orange-400" : "text-red-500"
           }`,
         }}
         radius="md"
