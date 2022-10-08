@@ -1,4 +1,5 @@
 import { Drawer } from "@mantine/core";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -38,17 +39,6 @@ export const LinkElements = () => {
     </>
   );
 };
-
-export const Logo = ({ setOpened }) => (
-  <Link href="/" passHref>
-    <div
-      onClick={() => setOpened(false)}
-      className="hover:cursor-pointer w-5 h-5"
-    >
-      {/* <Image layout="fill" src="/shaastra-logo.png" alt="saarang" /> */}
-    </div>
-  </Link>
-);
 
 export const NavbarDrawer = ({ opened, setOpened }) => (
   <Drawer

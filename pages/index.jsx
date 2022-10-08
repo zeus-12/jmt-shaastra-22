@@ -14,8 +14,8 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-28 justify-center sm:gap-0 sm:mx-12 flex sm:items-center font-mono">
-        <div className="flex flex-col sm:items-start items-center">
+      <div className="items-center min-h-[92vh] flex-col-reverse sm:flex-row sm:justify-between gap-28 justify-center sm:gap-0 sm:mx-12 flex font-mono">
+        <div className="flex flex-col sm:items-start items-center justify-between">
           <p className="text-blue-400 font-semibold text-[3.3rem] leading-none sm:text-7xl lg:text-8xl -mt-16">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fdd819] to-[#e80505] block">
               JUNIOR
@@ -36,7 +36,25 @@ export default function Home() {
           >
             Register
           </Button>
+          <div className="flex items-center">
+            <Image
+              layout="fixed"
+              width={"100"}
+              height={"100"}
+              src="/iitm-logo.jpg"
+              alt="IITM Logo"
+            />
+            <Image
+              layout="fixed"
+              width={"150"}
+              height={"150"}
+              className="w-auto"
+              src="/shaastra-logo.png"
+              alt="Shaastra Logo"
+            />
+          </div>
         </div>
+
         <div className="sm:absolute bottom-0 h-auto sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
           <Image
             priority={true}
@@ -128,6 +146,7 @@ export default function Home() {
       <Testimonial />
 
       <div id="testimonials"></div>
+      {/* </div> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { TextInput, ActionIcon, Button, Radio, Modal } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { IconTrash } from "@tabler/icons";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Register = () => {
@@ -74,10 +75,19 @@ const Register = () => {
 
   return (
     <div className="flex flex-col mx-2 sm:mx-4 items-center">
+      <div className="absolute right-0 mt-1">
+        <Image
+          layout="fixed"
+          width={"95"}
+          height={"95"}
+          src="/partners/creya_learning.png"
+          alt="JMT Logo"
+        />
+      </div>
       <p className="text-5xl text-orange-400 font-bold text-center pt-4 pb-0">
         Register
       </p>
-      <p className="text-gray-400 my-2 text-center">
+      <p className="text-gray-400 my-2 mt-7 sm:mt-2 text-center">
         Already registered? Download your problem statement{" "}
         <a className="text-cyan-400" href="">
           here
@@ -102,13 +112,13 @@ const Register = () => {
         </Radio.Group>
       </div>
 
-      <div className="flex mt-4 mb-2 items-center justify-between max-w-[25rem] w-screen">
-        <p className="text-3xl font-semibold">Team Members</p>
+      <div className="flex mt-4 px-2 items-center justify-between max-w-[25rem] w-screen">
+        <p className="sm:text-3xl text-2xl font-semibold">Team Members</p>
         <Button
           className={
             form.values.studentDetails.length > 3
               ? "hidden"
-              : "" + "bg-orange-500 hover:bg-orange-600"
+              : "" + "bg-orange-600 hover:bg-orange-700"
           }
           onClick={addNewTeamMember}
         >
@@ -157,7 +167,9 @@ const Register = () => {
               {...form.getInputProps(`studentDetails.${index}.school`)}
             />
             <Button
-              className={index === 0 ? "hidden" : ""}
+              className={`${
+                index === 0 ? "hidden" : ""
+              } text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-white`}
               onClick={() => copyLeadersData(index, "school")}
               variant="outline"
               compact
@@ -180,7 +192,9 @@ const Register = () => {
               {...form.getInputProps(`studentDetails.${index}.city`)}
             />
             <Button
-              className={index == 0 ? "hidden" : ""}
+              className={`${
+                index === 0 ? "hidden" : ""
+              } text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-white`}
               onClick={() => copyLeadersData(index, "city")}
               variant="outline"
               compact
@@ -194,7 +208,7 @@ const Register = () => {
       <Button
         onClick={registerHandler}
         loading={loading}
-        className="hover:text-white text-orange-500 border-orange-500 hover:bg-orange-500 mt-3"
+        className="hover:text-white text-orange-600 border-orange-600 hover:bg-orange-700 mt-3"
         variant="outline"
       >
         Register

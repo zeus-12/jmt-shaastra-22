@@ -1,6 +1,6 @@
 import { Burger } from "@mantine/core";
 import { useState } from "react";
-import { Logo, LinkElements, NavbarDrawer } from "./NavbarComponents";
+import { LinkElements, NavbarDrawer } from "./NavbarComponents";
 
 export default function Navbar() {
   //for the burger & drawer
@@ -10,8 +10,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="px-6 border-b-[1px] border-gray-800 w-screen h-[8vh] bg-[#000000] relative top-0 flex justify-between items-center z-40 ">
-        <Logo setOpened={setOpened} />
-        <div className="sm:hidden">
+        <div className="sm:hidden ml-auto">
           <Burger
             color="#e9672f"
             opened={opened}

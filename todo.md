@@ -1,14 +1,11 @@
-- compress images, use nextimage for all
+- compress images
 - fix image loading for 404 page
-- add card-like-bg for home-page items
-- blockquqote color?
 - set slideSize to 100 in small screens
 - for next images:
   placeholder="blur"
   blurDataURL={data:image/...}
 
 - include webm or .ogg for firefox and opera (video tag)
-  <code>
 
 According to https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_format you should use .webm or .ogg for firefox and opera. You can include both formats to make it work on all modern browsers
 
@@ -19,5 +16,3 @@ According to https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_f
   <source src="movie.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
-`
-</code>
