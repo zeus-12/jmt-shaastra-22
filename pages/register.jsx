@@ -125,7 +125,9 @@ const Register = () => {
 
             <ActionIcon
               color="red"
-              className="text-red-500 border-red-500 hover:bg-red-500 hover:text-white"
+              className={`text-red-500 border-red-500 hover:bg-red-500 hover:text-white ${
+                form.values.studentDetails.length === 1 ? "hidden" : ""
+              }`}
               variant="outline"
               onClick={() => form.removeListItem("studentDetails", index)}
             >
