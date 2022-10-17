@@ -1,6 +1,8 @@
 const Airtable = require("airtable");
 export default function handler(req, res) {
-  const data = JSON.parse(req.body);
+  // console.log(req.body);
+  const data = req.body;
+  // const data = JSON.parse(req.body);
 
   Airtable.configure({
     endpointUrl: "https://api.airtable.com",
@@ -62,5 +64,5 @@ export default function handler(req, res) {
     }
   );
 
-  res.status(200).json({ success: "success", recordId: record.getId() });
+  res.status(200).json({ success: "success" });
 }
