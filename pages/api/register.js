@@ -2,7 +2,10 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 
 export default function handler(req, res) {
   console.log(req.body);
-
+  // PS: GIVE
+  // 2 . Do not remove ----BEGIN PRIVATE KEY---- or ----END PRIVATE KEY---- or anything else from your private key.
+  // 3 . Do this to your private key before using process.env.GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\n/g, '\n')
+  // 4 . Enable Google Sheet API from google console
   const { teamName, category, studentDetails } = req.body;
   if (
     !teamName ||
