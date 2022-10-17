@@ -5,11 +5,9 @@ import { useRouter } from "next/router";
 
 const navbarElements = [
   { name: "Home", href: "/" },
-  // { name: "About", href: "/#about" },
   { name: "Gallery", href: "/gallery" },
   { name: "Register", href: "/register" },
   { name: "Partners", href: "/partners" },
-  // { name: "Testimonials", href: "/#testimonials" },
   { name: "Team", href: "/team" },
 ];
 
