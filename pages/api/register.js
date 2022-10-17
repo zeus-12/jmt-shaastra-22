@@ -1,17 +1,9 @@
-const Airtable = require("airtable");
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
 export default function handler(req, res) {
   console.log(req.body);
-  const data = req.body;
-  // const data = JSON.parse(req.body);
 
-  Airtable.configure({
-    endpointUrl: "https://api.airtable.com",
-    apiKey: process.env.AIRTABLE_API_KEY,
-  });
-  var base = Airtable.base(process.env.AIRTABLE_BASE_ID);
-
-  const { teamName, category, studentDetails } = data;
+  const { teamName, category, studentDetails } = req.body;
   if (
     !teamName ||
     !category ||
@@ -21,8 +13,6 @@ export default function handler(req, res) {
   ) {
     res.status(400).json({ error: "Invalid data" });
   }
-
-  console.log("1");
 
   studentDetails.forEach((student) => {
     if (
@@ -37,6 +27,33 @@ export default function handler(req, res) {
     }
   });
 
+  // Config variables
+  const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+  const SHEET_ID = process.env.SHEET_ID;
+  const CLIENT_EMAIL = process.env.GOOGLE_CLIENT_EMAIL;
+  const PRIVATE_KEY = process.env.GOOGLE_SERVICE_PRIVATE_KEY.replace(
+    /\\n/g,
+    "\n"
+  );
+
+  const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+
+  const appendSpreadsheet = async (row) => {
+    try {
+      await doc.useServiceAccountAuth({
+        client_email: CLIENT_EMAIL,
+        private_key: PRIVATE_KEY,
+      });
+      // loads document properties and worksheets
+      await doc.loadInfo();
+
+      const sheet = doc.sheetsById[SHEET_ID];
+      const result = await sheet.addRow(row);
+    } catch (e) {
+      console.error("Error: ", e);
+    }
+  };
+
   let fields = {
     teamName,
     category,
@@ -48,32 +65,7 @@ export default function handler(req, res) {
     });
   });
 
-  console.log(2);
-
-  base("JMT registrations").create(
-    [
-      {
-        fields,
-      },
-    ],
-    function (err, records) {
-      console.log(3);
-      if (err) {
-        console.error(err);
-        res
-          .status(500)
-          .json({ error: "Some error occured, please try again later!" });
-        return;
-      }
-
-      console.log(4);
-
-      records.forEach(function (record) {
-        console.log(record.getId());
-      });
-    }
-  );
-  console.log(5);
+  appendSpreadsheet(fields);
 
   res.status(200).json({ success: "success" });
 }

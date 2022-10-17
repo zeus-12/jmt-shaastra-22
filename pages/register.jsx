@@ -236,9 +236,13 @@ const Register = () => {
           <>
             <p> Thank you for registering!</p>
             <p>
-              {" "}
               Please fill the team leader details at{" "}
-              <a href="https://forms.gle/tFR6Dxm5HPw5hsUeA">GForm</a>
+              <a
+                className="text-cyan-400"
+                href="https://forms.gle/tFR6Dxm5HPw5hsUeA"
+              >
+                GForm
+              </a>
             </p>
             <p>
               Download your problem statement{" "}
