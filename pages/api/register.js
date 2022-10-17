@@ -22,6 +22,8 @@ export default function handler(req, res) {
     res.status(400).json({ error: "Invalid data" });
   }
 
+  console.log("1");
+
   studentDetails.forEach((student) => {
     if (
       !student.name ||
@@ -46,6 +48,8 @@ export default function handler(req, res) {
     });
   });
 
+  console.log(2);
+
   base("JMT registrations").create(
     [
       {
@@ -53,6 +57,7 @@ export default function handler(req, res) {
       },
     ],
     function (err, records) {
+      console.log(3);
       if (err) {
         console.error(err);
         res
@@ -60,11 +65,15 @@ export default function handler(req, res) {
           .json({ error: "Some error occured, please try again later!" });
         return;
       }
+
+      console.log(4);
+
       records.forEach(function (record) {
         console.log(record.getId());
       });
     }
   );
+  console.log(5);
 
   res.status(200).json({ success: "success" });
 }
