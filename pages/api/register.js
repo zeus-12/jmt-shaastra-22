@@ -1,6 +1,9 @@
 const Airtable = require("airtable");
+
 export default function handler(req, res) {
-  // console.log(req.body);
+  console.log("hey");
+
+  console.log(req.body);
   const data = req.body;
   // const data = JSON.parse(req.body);
 
@@ -14,6 +17,7 @@ export default function handler(req, res) {
   if (
     !teamName ||
     !category ||
+    !studentDetails ||
     studentDetails.length < 1 ||
     studentDetails.length > 4
   ) {
