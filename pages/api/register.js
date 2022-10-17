@@ -42,7 +42,6 @@ export default function handler(req, res) {
     });
   });
 
-  console.log(fields);
   base("JMT registrations").create(
     [
       {
@@ -63,5 +62,5 @@ export default function handler(req, res) {
     }
   );
 
-  res.status(200).json({ success: "success" });
+  res.status(200).json({ success: "success", recordId: record.getId() });
 }
