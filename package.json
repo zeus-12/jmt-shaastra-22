@@ -18,6 +18,7 @@
     "embla-carousel-autoplay": "^7.0.3",
     "embla-carousel-react": "^7.0.3",
     "google-spreadsheet": "^3.3.0",
+    "googleapis": "^108.0.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
