@@ -79,13 +79,15 @@ const Register = () => {
   return (
     <div className="flex flex-col mx-2 sm:mx-4 items-center">
       <div className="absolute right-0 mt-1">
-        <Image
-          layout="fixed"
-          width={"95"}
-          height={"95"}
-          src="/partners/creya_learning.png"
-          alt="JMT Logo"
-        />
+        <a href="https://www.creyalearning.com/">
+          <Image
+            layout="fixed"
+            width={"95"}
+            height={"95"}
+            src="/partners/creya_learning.png"
+            alt="JMT Logo"
+          />
+        </a>
       </div>
       <p className="text-5xl text-orange-400 font-bold text-center pt-4 pb-0">
         Register

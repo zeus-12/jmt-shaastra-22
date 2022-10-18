@@ -14,7 +14,6 @@ const Partners = () => {
       </p>
 
       <div className="">
-        {/* {Object.keys(partnerDetails).map((year) => { */}
         {[2023, "2022 & 2021", 2020].map((year) => {
           let partners = partnerDetails[year];
           return (
@@ -26,14 +25,22 @@ const Partners = () => {
                     className="sm:w-48 sm:h-48 h-32 w-32 hover:scale-105 transition transform duration-150 ease-out"
                     key={partner}
                   >
-                    <Image
-                      width="100%"
-                      height="100%"
-                      layout="responsive"
-                      objectFit="contain"
-                      src={`/partners/${partner}`}
-                      alt={`${partner} logo`}
-                    />
+                    <a
+                      href={
+                        partner === "creya_learning.png"
+                          ? "https://www.creyalearning.com/"
+                          : null
+                      }
+                    >
+                      <Image
+                        width="100%"
+                        height="100%"
+                        layout="responsive"
+                        objectFit="contain"
+                        src={`/partners/${partner}`}
+                        alt={`${partner} logo`}
+                      />
+                    </a>
                   </div>
                 ))}
               </div>
