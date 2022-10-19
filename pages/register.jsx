@@ -94,7 +94,7 @@ const Register = () => {
       </p>
       <p className="text-gray-400 my-2 mt-7 sm:mt-2 text-center">
         Already registered? Download your problem statement{" "}
-        <a className="text-cyan-400" href="">
+        <a className="text-cyan-400" href="/JMT PS 22-23.pdf" download={true}>
           here
         </a>
       </p>
@@ -248,7 +248,11 @@ const Register = () => {
             </p> */}
             <p>
               Download your problem statement{" "}
-              <a className="text-cyan-400" href="">
+              <a
+                className="text-cyan-400"
+                href="/JMT PS 22-23.pdf"
+                download={true}
+              >
                 here
               </a>
             </p>
