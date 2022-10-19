@@ -237,7 +237,7 @@ const Register = () => {
         {title !== "Error" && (
           <>
             <p> Thank you for registering!</p>
-            <p>
+            {/* <p>
               Please fill the team leader details at{" "}
               <a
                 className="text-cyan-400"
@@ -245,7 +245,7 @@ const Register = () => {
               >
                 GForm
               </a>
-            </p>
+            </p> */}
             <p>
               Download your problem statement{" "}
               <a className="text-cyan-400" href="">
