@@ -8,6 +8,7 @@ const Testimonial = () => {
       </p>
       <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw] flex flex-col sm:flex-row justify-center items-center">
         <video
+          preload="none"
           className="sm:w-[40vw]  rounded-md h-auto max-h-[60vh]"
           // autoplay=""
           controls="controls"
@@ -25,6 +26,7 @@ const Testimonial = () => {
 
       <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw] flex flex-col sm:flex-row-reverse justify-center items-center">
         <video
+          preload="none"
           className="sm:w-[40vw]  rounded-md h-auto max-h-[60vh]"
           // autoplay=""
           controls="controls"
