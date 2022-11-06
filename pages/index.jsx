@@ -74,7 +74,9 @@ export default function Home() {
           id="about"
         >
           <div className="w-full sm:w-3/4 md:w-1/2">
-            <p className="sm:text-5xl text-3xl font-semibold">About</p>
+            <p className="sm:text-5xl text-3xl font-semibold text-gray-200 tracking-tight">
+              About
+            </p>
             <p className="font-medium text-gray-400 mt-2 text-xl">
               <span className="text-orange-400">Junior Make-a-Thon</span>
               (JMT) is a one-of-a-kind event launched under Tech and Innovation
@@ -127,7 +129,9 @@ export default function Home() {
             />
           </div>
           <div className="w-full sm:w-3/4 md:w-1/2">
-            <p className="sm:text-5xl text-3xl font-semibold">Why?</p>
+            <p className="sm:text-5xl text-3xl font-semibold text-gray-200 tracking-tight">
+              Why?
+            </p>
             <p className="font-medium text-gray-400 mt-2 text-xl">
               The purpose of JMT is to introduce{" "}
               <span className="text-orange-400">maker culture</span> to school

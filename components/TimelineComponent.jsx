@@ -39,7 +39,7 @@ const TimelineComponent = () => {
           lineWidth={3}
           bulletSize={16}
         >
-          <p className="sm:text-5xl text-4xl  sm:ml-14 font-semibold mb-8">
+          <p className="sm:text-5xl text-4xl text-gray-200 sm:ml-14 font-semibold mb-8 tracking-tight">
             Timeline
           </p>
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw] ">
@@ -56,7 +56,7 @@ const TimelineComponent = () => {
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
               style={{ opacity: opacityForBlock(progress, 2) }}
-              className="text-2xl sm:text-4xl font-semibold "
+              className="text-2xl sm:text-4xl font-semibold"
             >
               <span className="block text-orange-400">Round 1: </span>
               The team will submit an abstract of their product ideas, as well
@@ -68,7 +68,7 @@ const TimelineComponent = () => {
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
               style={{ opacity: opacityForBlock(progress, 3) }}
-              className="text-2xl sm:text-4xl font-semibold "
+              className="text-2xl sm:text-4xl font-semibold"
             >
               <span className="block text-orange-400">Round 2: </span>
               Top teams will be given mentorship sessions to help them finish
@@ -80,7 +80,7 @@ const TimelineComponent = () => {
           <Timeline.Item className="text-2xl sm:text-3xl sm:max-w-[60vw]">
             <p
               style={{ opacity: opacityForBlock(progress, 4) }}
-              className="text-2xl sm:text-4xl font-semibold "
+              className="text-2xl sm:text-4xl font-semibold"
             >
               <span className="block text-orange-400">Finals: </span>3 day event
               at IIT Madras, along with several workshops. A lot of rewards are

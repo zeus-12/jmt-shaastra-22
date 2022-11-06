@@ -2,8 +2,8 @@ import { Blockquote } from "@mantine/core";
 
 const Testimonial = () => {
   return (
-    <div className="min-h-screen mt-16">
-      <p className="sm:text-5xl text-3xl font-semibold text-center mb-6">
+    <div className="min-h-screen mt-16 flex items-center flex-col justify-center">
+      <p className="sm:text-5xl text-3xl font-semibold text-center mb-6 tracking-tight text-gray-200">
         Testimonials
       </p>
       <div className="mx-auto md:max-w-[80vw] xl:max-w-[70vw] flex flex-col sm:flex-row justify-center items-center">
