@@ -1,6 +1,9 @@
 import { google } from "googleapis";
 
 async function handler(req, res) {
+  res.status(400).json({ error: "Submissions are closed!" });
+  return;
+
   if (req.method !== "POST") {
     return res.status(405).send({ message: "Only POST requests allowed" });
   }

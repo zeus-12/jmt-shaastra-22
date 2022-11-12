@@ -92,13 +92,17 @@ const Register = () => {
       <p className="text-5xl text-orange-400 font-bold text-center pt-4 pb-0">
         Register
       </p>
+
+      <p className="font-bold text-3xl tracking-tighter">
+        Submissions are closed!
+      </p>
       <p className="text-gray-400 my-2 mt-7 sm:mt-2 text-center">
         Already registered? Download your problem statement{" "}
         <a className="text-cyan-400" href="/JMT PS 22-23.pdf" download={true}>
           here
         </a>
       </p>
-      <TextInput
+      {/* <TextInput
         required={true}
         className="w-[90vw] max-w-[30rem]"
         label="Team Name"
@@ -236,8 +240,8 @@ const Register = () => {
         )}
         {title !== "Error" && (
           <>
-            <p> Thank you for registering!</p>
-            {/* <p>
+            <p> Thank you for registering!</p> */}
+      {/* <p>
               Please fill the team leader details at{" "}
               <a
                 className="text-cyan-400"
@@ -246,7 +250,7 @@ const Register = () => {
                 GForm
               </a>
             </p> */}
-            <p>
+      {/* <p>
               Download your problem statement{" "}
               <a
                 className="text-cyan-400"
@@ -258,7 +262,7 @@ const Register = () => {
             </p>
           </>
         )}
-      </Modal>
+      </Modal> */}
     </div>
   );
 };
