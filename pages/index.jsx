@@ -76,11 +76,13 @@ export default function Home() {
               About
             </p>
             <p className="text-gray-400 mt-2 text-xl">
-              <span className="text-orange-400">Junior Make-a-Thon</span>
+              <span className="font-medium text-orange-400">
+                Junior Make-a-Thon
+              </span>
               (JMT) is a one-of-a-kind event launched under Tech and Innovation
               Fair that promotes maker spirit among school students by
               encouraging them to{" "}
-              <span className="text-orange-400">
+              <span className="font-medium text-orange-400">
                 build unique and innovative solutions
               </span>{" "}
               for existing problems. Students undergo dedicated mentorship
@@ -132,14 +134,16 @@ export default function Home() {
             </p>
             <p className="text-gray-400 mt-2 text-xl ">
               The purpose of JMT is to introduce{" "}
-              <span className="text-orange-400">maker culture</span> to school
-              students and encourage them to come up with innovative solutions
-              to various problems. JMT motivates students to combine their
-              practical thinking skills with theoretical knowledge they gain
-              from school to solve real life problems. It also introduces
+              <span className="font-medium text-orange-400">maker culture</span>{" "}
+              to school students and encourage them to come up with innovative
+              solutions to various problems. JMT motivates students to combine
+              their practical thinking skills with theoretical knowledge they
+              gain from school to solve real life problems. It also introduces
               enterpreneurship to these students thus creating the{" "}
-              <span className="text-orange-400">future enterpreneurs</span> of
-              the country.
+              <span className="font-medium text-orange-400">
+                future enterpreneurs
+              </span>{" "}
+              of the country.
             </p>
           </div>
         </div>
