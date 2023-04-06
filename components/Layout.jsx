@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Link passHref href="/" className="hover:cursor-pointer ">
+      {/* <Link passHref href="/" className="hover:cursor-pointer ">
         <div className=" hover:cursor-pointer absolute -mt-3">
           <Image
             layout="fixed"
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
             alt="JMT Logo"
           />
         </div>
-      </Link>
+      </Link> */}
       <div className=" bg-[#080d13] min-h-[92vh]">{children}</div>
     </>
   );

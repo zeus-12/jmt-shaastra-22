@@ -38,14 +38,12 @@ export default function Home() {
           </Button>
           <div className="flex items-center">
             <Image
-              layout="fixed"
               width={"100"}
               height={"100"}
-              src="/iitm-logo.jpg"
+              src="/iitm-logo.png"
               alt="IITM Logo"
             />
             <Image
-              layout="fixed"
               width={"150"}
               height={"150"}
               className="w-auto"
@@ -58,8 +56,8 @@ export default function Home() {
         <div className="sm:absolute bottom-0 h-auto sm:right-0 w-[80vw] xl:w-[30vw] sm:w-[35vw] lg:w-[33vw] ">
           <Image
             priority={true}
-            width="100%"
-            height="100%"
+            width={100}
+            height={100}
             layout="responsive"
             objectFit="contain"
             src="/robot.png"
@@ -77,7 +75,7 @@ export default function Home() {
             <p className="sm:text-5xl text-3xl font-semibold text-gray-200 tracking-tight">
               About
             </p>
-            <p className="font-medium text-gray-400 mt-2 text-xl">
+            <p className="text-gray-400 mt-2 text-xl">
               <span className="text-orange-400">Junior Make-a-Thon</span>
               (JMT) is a one-of-a-kind event launched under Tech and Innovation
               Fair that promotes maker spirit among school students by
@@ -106,8 +104,8 @@ export default function Home() {
           </div>
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
-              width="100%"
-              height="100%"
+              width={80}
+              height={80}
               layout="responsive"
               objectFit="contain"
               src="/about-us.png"
@@ -120,8 +118,8 @@ export default function Home() {
         <div className="flex-col-reverse gap-6 sm:flex-row flex justify-evenly items-center">
           <div className="w-[70vw] sm:w-[50vw] md:w-[40vw] lg:w-[30vw]">
             <Image
-              width="100%"
-              height="100%"
+              width={80}
+              height={80}
               layout="responsive"
               objectFit="contain"
               src="/why-us.png"
@@ -132,7 +130,7 @@ export default function Home() {
             <p className="sm:text-5xl text-3xl font-semibold text-gray-200 tracking-tight">
               Why?
             </p>
-            <p className="font-medium text-gray-400 mt-2 text-xl">
+            <p className="text-gray-400 mt-2 text-xl ">
               The purpose of JMT is to introduce{" "}
               <span className="text-orange-400">maker culture</span> to school
               students and encourage them to come up with innovative solutions
@@ -149,7 +147,6 @@ export default function Home() {
       <TimelineComponent />
       <Testimonial />
 
-      <div id="testimonials"></div>
       {/* </div> */}
     </div>
   );

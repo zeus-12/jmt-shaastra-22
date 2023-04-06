@@ -70,18 +70,17 @@ const Team = () => {
         let members = team[key];
         return (
           <div key={key}>
-            <p className="sm:text-4xl text-gray-300 text-2xl text-center font-semibold my-2 sm:my-4">
+            <p className="sm:text-4xl text-gray-300 text-2xl text-center font-semibold my-2 sm:my-4 tracking-tight">
               {key}
             </p>
-            <div className="flex flex-wrap justify-center items-center">
+            <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8 xl:gap-12">
               {members.map((member) => (
                 <div className="mb-4" key={member.name}>
-                  <div className="hover:scale-105 transition transform duration-150 ease-out w-[45vw] lg:w-[25vw] mb-2">
+                  <div className="hover:scale-105 transition transform duration-150 ease-out w-auto h-[40vh] mb-2">
                     <Image
-                      width="100%"
-                      height="100%"
-                      layout="responsive"
-                      objectFit="contain"
+                      width={150}
+                      height={150}
+                      className="rounded-md w-full h-full"
                       src={`/team/${key}/${member.name}.jpg`}
                       alt={member.name}
                     />
